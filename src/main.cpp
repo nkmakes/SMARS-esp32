@@ -8,6 +8,12 @@
 #include "config.h"
 #include "web.h"
 
+/** ESP32 robot tank with wifi and one joystick web control sketch. 
+    Based on SMARS modular robot project using esp32 and tb6612.
+    https://www.thingiverse.com/thing:2662828
+    for complete complete program: https://github.com/nkmakes/SMARS-esp32
+    Made by nkmakes.github.io, August 2020.
+ **/
 
 Motor motor2 = Motor(AIN1, AIN2, PWMA, offsetA, STBY,5000 ,8,1 );
 Motor motor1 = Motor(BIN1, BIN2, PWMB, offsetB, STBY,5000 ,8,2 );
@@ -15,11 +21,7 @@ Motor motor1 = Motor(BIN1, BIN2, PWMB, offsetB, STBY,5000 ,8,2 );
 using namespace websockets;
 WebsocketsServer server;
 AsyncWebServer webserver(80);
- 
 
- 
-// Arduino like analogWrite
-// value has to be between 0 and valueMa
 void setup()
 {
   Serial.begin(9600);
