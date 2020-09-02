@@ -2,11 +2,16 @@
 
 Esp32 webserver robot tank control. Uses only one Jostick to control the movement. Based on TB6612FNG motor driver and smars project robot, uses async HTML protocol. 
 
+## See it in action
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uIImwilvI2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Configuration
 
 src/config.h contains the setup.
 
 You need to modify your password and SSID to a personal one, and set your TB6612FNG Driver pins.
+
 
 ## More info
 
