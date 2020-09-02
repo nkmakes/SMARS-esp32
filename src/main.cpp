@@ -15,15 +15,6 @@
     Made by nkmakes.github.io, August 2020.
  **/
 
-Motor motor2 = Motor(AIN1, AIN2, PWMA, offsetA, STBY,5000 ,8,1 );
-Motor motor1 = Motor(BIN1, BIN2, PWMB, offsetB, STBY,5000 ,8,2 );
- 
-using namespace websockets;
-WebsocketsServer server;
-AsyncWebServer webserver(80);
-
-int LValue, RValue, commaIndex;
-
 void setup()
 {
   Serial.begin(9600);
