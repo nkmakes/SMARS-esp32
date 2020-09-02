@@ -22,6 +22,8 @@ using namespace websockets;
 WebsocketsServer server;
 AsyncWebServer webserver(80);
 
+int LValue, RValue, commaIndex;
+
 void setup()
 {
   Serial.begin(9600);
@@ -49,9 +51,9 @@ void setup()
  
 // handle http messages
 void handle_message(WebsocketsMessage msg) {
-  int commaIndex = msg.data().indexOf(',');
-  int LValue = msg.data().substring(0, commaIndex).toInt();
-  int RValue = msg.data().substring(commaIndex + 1).toInt();
+  commaIndex = msg.data().indexOf(',');
+  LValue = msg.data().substring(0, commaIndex).toInt();
+  RValue = msg.data().substring(commaIndex + 1).toInt();
   motor1.drive(LValue);
   motor2.drive(RValue);
 }
